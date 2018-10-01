@@ -37,7 +37,7 @@ defmodule Cards do
   ## Example
 
       iex> deck = Cards.create_deck
-      iex> {hand, rest_of_deck} = Cards.deal(deck, 1)
+      iex> {hand, _rest_of_deck} = Cards.deal(deck, 1)
       iex> hand
       ["Ace of Spades"]
 
@@ -72,13 +72,8 @@ defmodule Cards do
     Return a new hand from a new shuffled deck.
     The `hand_size` parameter indicates how many cards should be in the hand
 
-    This methods works same as:
-
-  ## Example
-
-      iex> deck = Cards.create_deck
-      iex> shuffled_deck = Cards.shuffle(deck)
-      iex> {hand, rest_of_deck} = Cards.deal(shuffled_deck)
+    This methods is an alias for:
+    `Cards.create_deck |> Cards.shuffle |> Cards.deal(hand_size)`
 
   """
   def create_hand(hand_size) do

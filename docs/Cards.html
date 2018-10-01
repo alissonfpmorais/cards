@@ -178,15 +178,8 @@ Cards              </h1>
   <section class="docstring">
 <p>  Return a new hand from a new shuffled deck.
   The <code class="inline">hand_size</code> parameter indicates how many cards should be in the hand</p>
-<p>  This methods works same as:</p>
-<h2 id="create_hand/1-example" class="section-heading">
-  <a href="#create_hand/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  Example
-</h2>
-
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">deck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">create_deck</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="n">shuffled_deck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">shuffle</span><span class="p" data-group-id="7849586536-1">(</span><span class="n">deck</span><span class="p" data-group-id="7849586536-1">)</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="7849586536-2">{</span><span class="n">hand</span><span class="p">,</span><span class="w"> </span><span class="n">rest_of_deck</span><span class="p" data-group-id="7849586536-2">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">deal</span><span class="p" data-group-id="7849586536-3">(</span><span class="n">shuffled_deck</span><span class="p" data-group-id="7849586536-3">)</span></code></pre>
+<p>  This methods is an alias for:
+  <code class="inline">Cards.create_deck |&gt; Cards.shuffle |&gt; Cards.deal(hand_size)</code></p>
   </section>
 </div>
 <div class="detail" id="deal/2">
@@ -206,9 +199,9 @@ Cards              </h1>
 </h2>
 
 <pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">deck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">create_deck</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="8617672377-1">{</span><span class="n">hand</span><span class="p">,</span><span class="w"> </span><span class="n">rest_of_deck</span><span class="p" data-group-id="8617672377-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">deal</span><span class="p" data-group-id="8617672377-2">(</span><span class="n">deck</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="8617672377-2">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="2775071315-1">{</span><span class="n">hand</span><span class="p">,</span><span class="w"> </span><span class="c">_rest_of_deck</span><span class="p" data-group-id="2775071315-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">deal</span><span class="p" data-group-id="2775071315-2">(</span><span class="n">deck</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2775071315-2">)</span><span class="w">
 </span><span class="gp unselectable">iex&gt; </span><span class="n">hand</span><span class="w">
-</span><span class="p" data-group-id="8617672377-3">[</span><span class="s">&quot;Ace of Spades&quot;</span><span class="p" data-group-id="8617672377-3">]</span></code></pre>
+</span><span class="p" data-group-id="2775071315-3">[</span><span class="s">&quot;Ace of Spades&quot;</span><span class="p" data-group-id="2775071315-3">]</span></code></pre>
   </section>
 </div>
 <div class="detail" id="load/1">
