@@ -87,9 +87,7 @@ defmodule Cards do
       iex> {hand2, rest_of_deck2} = Cards.create_hand(1)
       iex> hand2
       ["Five of Clubs"]
-      iex> hand == hand2
-      true
-      iex> rest_of_deck == rest_of_deck2
+      iex> hand == hand2 && rest_of_deck == rest_of_deck2
       true
 
   """
