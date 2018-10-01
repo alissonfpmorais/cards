@@ -75,6 +75,21 @@ defmodule Cards do
     This methods is an alias for:
     `Cards.create_deck |> Cards.shuffle |> Cards.deal(hand_size)`
 
+  ## Example
+
+      iex> :rand.seed(:exsplus, {1, 2, 3})
+      iex> deck = Cards.create_deck
+      iex> shuffled_deck = Cards.shuffle(deck)
+      iex> {hand, _rest_of_deck} = Cards.deal(shuffled_deck, 1)
+      iex> hand
+      ["Five of Clubs"]
+      iex> :rand.seed(:exsplus, {1, 2, 3})
+      iex> {hand2, _rest_of_deck2} = Cards.create_hand(1)
+      iex> hand2
+      ["Five of Clubs"]
+      iex> hand == hand2
+      true
+
   """
   def create_hand(hand_size) do
     Cards.create_deck
