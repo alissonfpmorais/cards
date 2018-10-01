@@ -80,14 +80,16 @@ defmodule Cards do
       iex> :rand.seed(:exsplus, {1, 2, 3})
       iex> deck = Cards.create_deck
       iex> shuffled_deck = Cards.shuffle(deck)
-      iex> {hand, _rest_of_deck} = Cards.deal(shuffled_deck, 1)
+      iex> {hand, rest_of_deck} = Cards.deal(shuffled_deck, 1)
       iex> hand
       ["Five of Clubs"]
       iex> :rand.seed(:exsplus, {1, 2, 3})
-      iex> {hand2, _rest_of_deck2} = Cards.create_hand(1)
+      iex> {hand2, rest_of_deck2} = Cards.create_hand(1)
       iex> hand2
       ["Five of Clubs"]
       iex> hand == hand2
+      true
+      iex> rest_of_deck == rest_of_deck2
       true
 
   """
